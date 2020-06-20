@@ -44,6 +44,12 @@
   background-repeat: no-repeat;
 }
 
+.bg-sunflower-field{
+  background-image:url("../img/design/sunflower-field.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bg-light-arrow-btm{
   height: 50px;
   margin-top: -1px;
