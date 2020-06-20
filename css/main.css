@@ -44,10 +44,17 @@
   background-repeat: no-repeat;
 }
 
-.bg-sunflower-field{
-  background-image:url("../img/design/sunflower-field.jpg");
-  background-size: cover;
+.bg-sunflower-down-transparent{
+  background-image:url("../img/design/sunflower_half_down_transparent.png");
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: top;
+}
+
+.bg-sunflower-field{
+  background-image:url("../img/design/wood_panel_vig.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 .bg-light-arrow-btm{
@@ -115,4 +122,11 @@ p{
 .portfolio img{
   width: 100%;
   height: 100%;
+  border: 4px solid #fff;
+  box-shadow: 2px 2px 5px #333;
+  filter: brightness(0.875);
+  transition: 0.2s ease-in;
 }
+  .portfolio img:HOVER{
+    filter: brightness(1);
+  }
