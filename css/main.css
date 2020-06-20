@@ -1,0 +1,106 @@
+/* COLOR THEMES */
+.blue-bg{
+  background-color: #3185bd;
+  color: #fff;
+}
+  .blue-bg a{
+    color: #fff;
+  }
+
+.bg-green{
+  background-color: #85BD31;
+  color: #fff;
+}
+
+.bg-less-green{
+  background-color: #97BD5F;
+  color: #fff;
+}
+
+.bg-warning{
+  color: #fff;
+}
+
+.bg-magenta{
+  background-color: #BD3185;
+  color: #fff;
+}
+
+.text-blue{
+  color: #3185bd;
+}
+
+.bg-light{
+  color: #4b4b4b;
+}
+
+.bg-white{
+  color: #4b4b4b;
+}
+
+.bg-sunflower-transparent{
+  background-image:url("../img/design/sunflower_half_transparent.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-light-arrow-btm{
+  height: 50px;
+  margin-top: -1px;
+  background-image:url("../img/design/bg-light-arrow-btm.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* FONTS */
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto Slab', serif;
+}
+
+.card-header{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand{
+  font-family: 'Roboto Slab', serif;
+}
+
+.btn{
+  font-family: 'Roboto Slab', serif;
+}
+
+/* NAVBAR */
+
+/* CAROUSEL */
+#carouselExampleIndicators{
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item img{
+  border: 3px solid #fff;
+  border-bottom: 10px solid #fff;
+  transform: rotate(-10deg);
+  transition: .5s ease-in;
+  margin-right: 10px;
+}
+  .carousel-item img:HOVER{
+    transform: rotate(0deg);
+  }
+
+/* JUMBOTRON */
+.jumbotron{
+  background-image:url("../img/design/wood_panel_vig.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #fff;
+  text-shadow: 2px 2px 3px #333;
+}
