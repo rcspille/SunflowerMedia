@@ -54,6 +54,7 @@
 .bg-sunflower-field{
   background-image:url("../img/design/wood_panel_vig.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
 }
 
@@ -63,6 +64,10 @@
   background-image:url("../img/design/bg-light-arrow-btm.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.white-text{
+  color: #fff;
 }
 
 /* FONTS */
