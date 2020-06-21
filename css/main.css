@@ -26,6 +26,10 @@
   color: #fff;
 }
 
+.bg-trans{
+  background-color:rgba(230,230,230,0.8);
+}
+
 .text-blue{
   color: #3185bd;
 }
@@ -69,6 +73,23 @@
 .white-text{
   color: #fff;
 }
+
+footer{
+  color: #ccc;
+}
+  footer a{
+    font-size: smaller;
+    color: #ccc;
+  }
+  footer a:HOVER{
+    color: #ccc;
+  }
+  footer p{
+    margin-bottom: 0;
+  }
+  footer .title{
+    color: #fff;
+  }
 
 /* FONTS */
 h1,h2,h3,h4,h5,h6{
