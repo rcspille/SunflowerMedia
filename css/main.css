@@ -17,6 +17,10 @@
   color: #fff;
 }
 
+.bg-light-blue{
+  background-color: #DBEEFF;
+}
+
 .bg-warning{
   color: #fff;
 }
@@ -44,7 +48,8 @@
 
 .bg-sunflower-transparent{
   background-image:url("../img/design/sunflower_half_transparent.png");
-  background-size: cover;
+  background-size: contain;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -60,6 +65,10 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+}
+
+.bg-double-thin{
+  background-image:url("https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png");
 }
 
 .bg-light-arrow-btm{
@@ -115,6 +124,17 @@ p{
 }
 
 /* NAVBAR */
+
+/* HOMEPAGE GRID */
+.spacer-sm{
+  margin-top: 70px;
+}
+.spacer-md{
+  margin-top: 140px;
+}
+.spacer-lg{
+  margin-top: 210px;
+}
 
 /* CAROUSEL */
 #carouselExampleIndicators{
