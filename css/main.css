@@ -67,6 +67,13 @@
   background-position: center center;
 }
 
+.bg-sunflower-whole{
+  background-image:url("../img/design/sunflower_full_transparent.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .bg-double-thin{
   background-image:url("https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png");
 }
