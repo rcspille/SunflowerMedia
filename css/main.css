@@ -145,7 +145,7 @@ p{
 
 /* CAROUSEL */
 #carouselExampleIndicators{
-  height: 150px;
+  height: 175px;
   display: flex;
   align-items: center;
 }
