@@ -145,10 +145,15 @@ p{
 
 /* CAROUSEL */
 #carouselExampleIndicators{
-  height: 175px;
+  height: 150px;
   display: flex;
   align-items: center;
 }
+  @media only screen and (max-width: 600px){
+    #carouselExampleIndicators{
+      height: 300px !important;
+    }
+  }
 
 .carousel-item img{
   border: 3px solid #fff;
