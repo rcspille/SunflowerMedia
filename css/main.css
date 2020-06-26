@@ -191,15 +191,38 @@ p{
 }
   .portfolio img:HOVER{
     transform: scale(1.1);
+    box-shadow: 2px 2px 20px #333;
+    z-index: 5;
+  }
+  .portfolio img.tilt-left:HOVER{
+    transform: rotate(-2deg);
+  }
+  .portfolio img.tilt-right:HOVER{
+    transform: rotate(2deg);
   }
 
-#portfolio .portfolio img{
+#portfolio .portfolio-card img{
   filter: brightness(1);
   box-shadow: none;
-  border: none;
+  box-shadow:1px 1px 3px #666;
 }
-  #portfolio .portfolio img:HOVER{
+  #portfolio .portfolio-card img:HOVER{
     transform: scale(1);
+  }
+
+#paperclip{
+  width: 30px;
+  position: absolute;
+  border:none !important;
+  box-shadow:none !important;
+}
+  #paperclip.top-left{
+    left:40px;
+    top:-4px;
+  }
+  #paperclip.top-right{
+    right:40px;
+    top:-4px;
   }
 
 .portfolio-container{
