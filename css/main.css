@@ -90,6 +90,14 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+  .bg-light-arrow-btm.arrow-top{
+    transform: rotate(180deg);
+    height: 10px;
+    background-size:contain;
+    background-repeat: repeat-x;
+    margin-bottom: -1px;
+    margin-top: 40px;
+  }
 
 .white-text{
   color: #fff;
