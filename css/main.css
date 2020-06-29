@@ -159,6 +159,20 @@ p{
   border-bottom: 2px solid #3083BA;
 }
 
+.border-dashed-offer{
+  border: 1px dashed #666;
+}
+
+#special-offer li{
+  margin-right: 50px;
+}
+#special-offer li:last-child{
+  margin-right: 0px;
+}
+#special-offer i{
+  margin-top: 3px !important;
+}
+
 /* NAVBAR */
 .navbar{
   border-bottom: 2px solid #286C99;
