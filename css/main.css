@@ -178,6 +178,10 @@ p{
   border-bottom: 2px solid #286C99;
 }
 
+img.logo{
+  width: 100px;
+}
+
 /* HOMEPAGE GRID */
 .spacer-sm{
   margin-top: 70px;
