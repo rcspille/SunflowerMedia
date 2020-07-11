@@ -129,6 +129,13 @@ footer{
   footer .title{
     color: #fff;
   }
+footer a .fa{
+  color: #ccc;
+  transition: 0.3s ease-in;
+}
+  footer a .fa:HOVER{
+    color: #3185bd;
+  }
 
 /* FONTS */
 h1,h2,h3,h4,h5,h6{
