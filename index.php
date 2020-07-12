@@ -35,7 +35,7 @@
     <!-- begin NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark blue-bg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="./img/design/logo.png" class="logo" alt="Sunflwr logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,30 +45,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">Who We Are</a>
+              <a class="nav-link" href="about-us.php">Who We Are</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
               <div class="dropdown-menu blue-bg" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="web-design.html">Web Design</a>
-                <a class="dropdown-item" href="web-hosting.html">Web Hosting</a>
+                <a class="dropdown-item" href="web-design.php">Web Design</a>
+                <a class="dropdown-item" href="web-hosting.php">Web Hosting</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <a class="nav-link" href="portfolio.php">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="navbar-item">
-              <a class="nav-link" href="blog/index.html">Blog</a>
+              <a class="nav-link" href="blog/index.php">Blog</a>
             </li>
             <li class="navbar-item">
-              <a class="nav-link" href="clients/index.html">Client Login</a>
+              <a class="nav-link" href="clients/index.php">Client Login</a>
             </li>
           </ul>
         </div>
@@ -238,8 +238,8 @@
           <div class="container col-lg-6 col-md-6 col-sm-12 col-12 mt-3 text-justify" data-aos="fade-right">
             <center><h2>How We <span class="text-blue">Stick Out</span></h2></center>
             <p>At <b>Sunflwr</b>, we pride ourselves on our extreme attention to detail, and we always strive for perfection, all without
-              sacrificing your most valuable asset: <b>TIME</b>. Whether we&#39;re building a single <a href="web-design.html#pricing">landing page</a>
-              or a <a href="web-design.html#pricing">deluxe website</a> package, we know that you&#39;re looking for a quick turnaround. After all, the faster
+              sacrificing your most valuable asset: <b>TIME</b>. Whether we&#39;re building a single <a href="web-design.php#pricing">landing page</a>
+              or a <a href="web-design.php#pricing">deluxe website</a> package, we know that you&#39;re looking for a quick turnaround. After all, the faster
               you get online, the faster new customers can find your business.</p>
           </div>
           <div class="container col-lg-6 col-md-6 col-sm-12 col-12 mt-3 text-justify" data-aos="fade-left">
@@ -253,7 +253,7 @@
             <p>Regardless of your web design needs, <b><i>WE DO NOT CHARGE BY THE HOUR!</i></b> Thus, it truly is in our best interest
               to get you and your business online as fast as possible. Not only does this ensure a super speedy turnaround, but it also
               means that you can always send the site back for revisions without the worry of paying more for extra work. That is how
-              much we believe in the quality of our service. Learn about our extensive <a href="web-design.html#pricing">web design packages</a> and see which
+              much we believe in the quality of our service. Learn about our extensive <a href="web-design.php#pricing">web design packages</a> and see which
               one best suits your needs. We&#39;re always here to help!</p>
           </div>
         </div>
@@ -261,7 +261,7 @@
       <!-- SPECIAL OFFER TAB -->
       <div class="text-center pb-1">
         <a href="#special-offer" data-toggle="collapse" class="special-offer-tab"><h4 class="d-inline blue-bg text-white pb-1 pl-3 pr-3 rounded-top"><b>$<u>99</u></b> SPECIAL OFFER</h4></a>
-        <a href="web-design.html" class="special-offer-tab-action collapse" id="special-offer"><h4 class="d-inline bg-warning text-white pb-1 pl-3 pr-3 rounded-top">Learn More!</h4></a>
+        <a href="web-design.php" class="special-offer-tab-action collapse" id="special-offer"><h4 class="d-inline bg-warning text-white pb-1 pl-3 pr-3 rounded-top">Learn More!</h4></a>
       </div>
       <!-- end SPECIAL OFFER TAB -->
     </div>
@@ -305,7 +305,7 @@
           </div>
           -->
           <div class="col-12 mb-3" data-aos="fade-right">
-            <center><a href="portfolio.html" class="btn blue-bg btn-sm ">View Complete Portfolio</a></center>
+            <center><a href="portfolio.php" class="btn blue-bg btn-sm ">View Complete Portfolio</a></center>
           </div>
         </div>
       </div>
@@ -347,7 +347,7 @@
           </div>
           <div class="col-md-5 col-sm-12 text-md-left text-sm-center text-center mt-md-0 mt-sm-4 mt-5 border-left">
             <h4 class="mb-3">Or contact us <span class="text-blue">directly:</span></h4>
-            <p><i class="fa fa-envelope mr-2"></i>info@mySUNFLWR.com</p>
+            <p><i class="fa fa-envelope mr-2"></i><a class="text-dark" href="mailto:info@mysunflwr.com">info@mySUNFLWR.com</a></p>
             <p><i class="fa fa-phone mr-2"></i>upon request</p>
             <p class="text-muted alert alert-warning small">We value your privacy. Your information will never be sold or shared.</p>
           </div>
@@ -362,8 +362,8 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-6 mb-md-0 mb-sm-4 mb-4">
               <h6 class="title">Services</h6>
-              <p><a href="web-design.html">Web Design</a></p>
-              <p><a href="web-hosting.html">Web Hosting</a></p>
+              <p><a href="web-design.php">Web Design</a></p>
+              <p><a href="web-hosting.php">Web Hosting</a></p>
               <h6 class="title mt-3">Attributions</h6>
               <p><a href="#">Giving Thanks</a></p>
             </div>
@@ -381,9 +381,9 @@
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Business Stuff</h6>
-              <p><a href="about-us.html">About SUNFLWR</a></p>
-              <p><a href="blog/index.html">Company Blog</a></p>
-              <p><a href="contact.html">Contact Us</a></p>
+              <p><a href="about-us.php">About SUNFLWR</a></p>
+              <p><a href="blog/index.php">Company Blog</a></p>
+              <p><a href="contact.php">Contact Us</a></p>
               <p class="mt-2">
                 <a href="#"><i class="fa fa-facebook fa-lg mr-3"></i></a>
                 <a href="#"><i class="fa fa-twitter fa-lg mr-3"></i></a>

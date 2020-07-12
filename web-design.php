@@ -27,7 +27,7 @@
     <!-- Animate on Scroll CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Affordable Web Hosting Services | Phoenix, AZ | Sunflwr</title>
+    <title>Affordable Web Design Services | Phoenix, AZ | SUNFLWR</title>
   </head>
 
   <body>
@@ -35,7 +35,7 @@
     <!-- begin NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark blue-bg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="./img/design/logo.png" class="logo" alt="Sunflwr logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,30 +45,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">Who We Are</a>
+              <a class="nav-link" href="about-us.php">Who We Are</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
               <div class="dropdown-menu blue-bg" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="web-design.html">Web Design</a>
-                <a class="dropdown-item" href="web-hosting.html">Web Hosting</a>
+                <a class="dropdown-item" href="web-design.php">Web Design</a>
+                <a class="dropdown-item" href="web-hosting.php">Web Hosting</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <a class="nav-link" href="portfolio.php">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="navbar-item">
-              <a class="nav-link" href="blog/index.html">Blog</a>
+              <a class="nav-link" href="blog/index.php">Blog</a>
             </li>
             <li class="navbar-item">
-              <a class="nav-link" href="clients/index.html">Client Login</a>
+              <a class="nav-link" href="clients/index.php">Client Login</a>
             </li>
           </ul>
         </div>
@@ -80,11 +80,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-12 pt-lg-3 pt-md-3 pt-sm-3 pt-3">
-            <h1>Full Support <span class="text-blue">Web Hosting</span></h1>
-            <p class="text-justify">At <b>Sunflwr</b>, we believe in transparency. That means no hidden fees, no contracts, and the price you see
-              is the price you pay. Other web hosts might offer plans starting at a few dollars a month, but you&#39;ll soon realize that you have to
-              sign a contract of 3 years or more to get that price. Don&#39;t get locked down in a couple hundred dollar contract. Sunflwr has a
-              vision for a new type of web hosting, one that is highly adaptable to your ever-changing needs.</p>
+            <h1>Affordable Phoenix <span class="text-blue">Web Design</span></h1>
+            <p class="text-justify">At <b>Sunflwr</b>, we know the importance of having a professional website for your business. We have developed a simple
+              set of guidelines our clients should consider when building a new website or overhauling an existing site. When you choose Sunflwr for your
+              web design needs, we walk you through this entire process, answering questions and offering solutions to all of your needs.</p>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-12 text-right bg-sunflower-transparent"></div>
         </div>
@@ -95,54 +94,84 @@
     </div>
 
     <div class="container-fluid bg-light-blue">
-      <div class="container pt-lg-3 pt-md-3 pt-sm-3 pt-3 pb-lg-5 pb-md-5 pb-sm-5 pb-5">
-        <div class="row d-flex align-items-start">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-5 mb-5">
+      <div class="container  pt-lg-3 pt-md-3 pt-sm-3 pt-3 pb-lg-5 pb-md-5 pb-sm-5 pb-5">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-3 mb-3">
             <div class="card text-center shadow-lg" data-aos="fade-up">
               <div class="card-header bg-green">
-                <h2><i class="fa fa-tachometer mr-3"></i>SPEED</h2>
+                <h2><i class="fa fa-desktop mr-3"></i>FIRST IMPRESSIONS</h2>
               </div>
               <div class="card-body">
-                <p class="card-text text-justify"><b>Fast websites</b> are crucial to keeping visitors engaged and getting great search engine rankings.
-                  At Sunflwr, we don&#39;t overcrowd servers, meaning your website will be the fastest it can be.</p>
+                <p class="card-text text-justify">We have all come across those websites where we&#39;re just not sure if we should enter our credit card info, or if we should
+                  even bother calling for more information. Your business only has one chance at a first impression, and <b>Sunflwr</b> knows how to make it
+                  a great one! Your website should look clean and inviting, while not detracting from your visitors&#39; main focus: your product or service. Our
+                  extensive knowledge of <b>HTML5</b>, <b>CSS3</b>, and <b>JQuery</b> allows us to build beautiful, interactive, and fun websites. At the same time,
+                  our use of the <b>Bootstrap4</b> framework enables your website to look fantastic on any device imaginable! After all, over 50% of web traffic is
+                  primarily from mobile devices.</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-5 mb-5">
+          <div class="col-6 d-md-block d-sm-none d-none text-center">
+            <img src="https://www.bluefountainmedia.com/sites/default/files/insights/Responsive_Website_Design.jpg" style="width: 80%" class="shadow-lg rounded-circle zoom-hover" data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">
+          </div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6 col-sm-12 col-12 text-md-center text-sm-center text-center mb-3">
+            <img src="https://cms-assets.tutsplus.com/uploads/users/23/posts/29369/image/simple-ways-of-how-to-increase-online-sales.jpg" style="width: 80%" class="shadow-lg rounded-circle zoom-hover" data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-3 mb-3">
             <!--<div class="col-12 d-lg-block d-md-none d-sm-none d-none spacer-sm"></div>-->
             <div class="card text-center shadow-lg" data-aos="fade-up">
               <div class="card-header blue-bg">
-                <h2><i class="fa fa-area-chart mr-3"></i>RELIABILITY</h2>
+                <h2><i class="fa fa-camera-retro mr-3"></i>YOUR 24/7 SALESMAN</h2>
               </div>
               <div class="card-body">
-                <p class="card-text text-justify">We offer a <b>99% uptime guarantee</b>! A reliable website is a great website. Don&#39;t fall victim
-                  to the downtimes of cheap hosting. Your customers can be up at any time of day or night, and why lose business due to a server crash?</p>
+                <p class="card-text text-justify">We like to think of websites as around-the-clock salespeople. After all, a majority of website traffic comes from web searches
+                  like Google, Yahoo, and Bing. When visitors find your website, they should be able to easily find the information they need. We invite you to
+                  to consider what problems your customers need solved, what questions they will be asking, and to build your new website around your responses
+                  to their needs. During our initial interview with you, we will discuss these very ideas, guiding closer toward building an effective website
+                  in showcasing your product or service, all while catering to your target demographic.</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-5 mb-5">
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-3 mb-3">
             <!--<div class="col-12 d-lg-block d-md-none d-sm-none d-none spacer-md"></div>-->
             <div class="card text-center shadow-lg" data-aos="fade-up">
               <div class="card-header bg-warning">
-                <h2><i class="fa fa-database mr-3"></i>FEATURES</h2>
+                <h2><i class="fa fa-area-chart mr-3"></i>SEO MANAGEMENT</h2>
               </div>
               <div class="card-body">
-                <p class="card-text text-justify">Our web hosting services come with all the features of larger web hosts -- minus the cost. Don&#39;t
-                  miss out on your website functionality! Our hosting plans come with the latest <b>PHP</b> compilers, <b>MySQL</b> databases, <b>custom
-                  email</b> clients, and other highly-used features.</p>
+                <p class="card-text text-justify">The most beautiful, mobile-friendly, content-filled website is virutally <i>worthless</i> without proper search engine
+                  optimization, or SEO. In essence, it would be very comparable to having a neat and clean shop with countless products -- but no foot traffic.
+                  The great thing about websites is that location <i>does not matter!</i> Instead, focusing on keywords within your page content, meta descriptions
+                  to be used by search engines, inbound and outbound links from reputable sources, and lots more, will help your target demographic find your
+                  business. This is where those DIY website builders just don&#39;t make the cut. At <b>Sunflwr</b>, we know the ins and outs of SEO and
+                  how to make it work for your website.</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-5 mb-5">
+          <div class="col-6 d-md-block d-sm-none d-none text-center">
+            <img src="https://www.marquismedia.net/wp-content/uploads/2018/03/seo-blog.jpg" style="width: 80%" class="shadow-lg rounded-circle zoom-hover" data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">
+          </div>
+        </div>
+        <div class="row d-flex align-items-center">
+          <div class="col-md-6 col-sm-12 col-12 text-md-center text-sm-center text-center mb-3">
+            <img src="https://www.2440media.com/sites/default/files/assets/images/blog/Why%20Web%20Design%20Is%20A%20Good%20Career%20Choice.jpg" style="width: 80%" class="shadow-lg rounded-circle zoom-hover" data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-sm-3 mb-3">
             <!--<div class="col-12 d-lg-block d-md-none d-sm-none d-none spacer-lg"></div>-->
             <div class="card text-center shadow-lg" data-aos="fade-up">
               <div class="card-header bg-magenta">
-                <h2><i class="fa fa-support mr-3"></i>SUPPORT</h2>
+                <h2><i class="fa fa-gear mr-3"></i>MAINTENANCE</h2>
               </div>
               <div class="card-body">
-                <p class="card-text text-justify">Facing an issue? Need more functionality? Sunflwr is here with <b>exceptional support</b>. We
-                  know the ins and outs of web hosting and are here to fix any problems you may face. We&#39;re available daily by phone, email, and live
-                  chat! No need to stress when you have Sunflwr.</p>
+                <p class="card-text text-justify">Maintaining your website is the most important step after the official launch. At Sunflwr, we&#39;d like to ensure you that you are the sole owner of your new website
+                  when you take our web development services. This means that once we are done, there are two options: <b>1)</b> we train you and your employees
+                  in-person or via conference call how to add new content and edit existing information, also providing online video tutorials for future reference,
+                  or <b>2)</b> you select a monthly maintenance plan in which we will make edits and add new content for you. Either way, your website is yours, and
+                  you can wave goodbye and take it with you if you ever choose to do so.</p>
               </div>
             </div>
           </div>
@@ -154,98 +183,86 @@
     <!-- begin PRICING TABLE -->
     <div class="container-fluid bg-stripe-blue pt-5 pb-5">
       <div class="container">
-        <center><h2 class="white-text mb-4">Phoenix Web Hosting Packages</h2></center>
+        <center><h2 class="white-text mb-4">Phoenix Web Design Packages</h2></center>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="pricingTable" data-aos="flip-left" data-aos-delay="250">
-                    <h3 class="title">BASIC</h3>
+                    <h3 class="title">SEEDLING</h3>
                     <div class="price-value">
                         <span class="currency">$</span>
-                        <span class="amount">10</span>
-                        <span class="month">/month</span>
+                        <span class="amount">99</span>
+                        <span class="month">one time</span>
                     </div>
                     <ul class="pricing-content">
-                        <li><b>1</b> Website</li>
-                        <li><b>1GB</b> Storage</li>
-                        <li><b>10GB</b> Bandwidth</li>
-                        <li><b>Unlmtd.</b> Email Accounts</li>
-                        <li><b>Unlmtd.</b> Databases</li>
-                        <li><b>Daily</b> Support</li>
-                        <li><b>Weekly</b> Backups</li>
+                        <li><b>1</b> Landing Page</li>
+                        <li><b>1</b> Photo Gallery</li>
+                        <li><b>1</b> Contact Form</li>
+                        <li><b>1mo.</b> Maintenance</li>
                     </ul>
-                    <a href="contact.html" class="pricingTable-signup">Get Started</a>
+                    <a href="contact.php" class="pricingTable-signup">Get Started</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="pricingTable pink" data-aos="flip-left" data-aos-delay="500">
-                    <h3 class="title">PLUS</h3>
+                    <h3 class="title">LEAF</h3>
                     <div class="price-value">
                         <span class="currency">$</span>
-                        <span class="amount">15</span>
-                        <span class="month">/month</span>
+                        <span class="amount">199</span>
+                        <span class="month">one time</span>
                     </div>
                     <ul class="pricing-content">
-                        <li><b>3</b> Websites</li>
-                        <li><b>3GB</b> Storage</li>
-                        <li><b>30GB</b> Bandwidth</li>
-                        <li><b>Unlmtd.</b> Email Accounts</li>
-                        <li><b>Unlmtd.</b> Databases</li>
-                        <li><b>Daily</b> Support</li>
-                        <li><b>Weekly</b> Backups</li>
+                        <li><b>3</b> Pages</li>
+                        <li><b>3</b> Photo Galleries</li>
+                        <li><b>3</b> Contact Forms</li>
+                        <li><b>1mo.</b> Maintenance</li>
                     </ul>
-                    <a href="contact.html" class="pricingTable-signup">Get Started</a>
+                    <a href="contact.php" class="pricingTable-signup">Get Started</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="pricingTable blue" data-aos="flip-left" data-aos-delay="750">
-                    <h3 class="title">ENTREPRENEUR</h3>
+                    <h3 class="title">SUNFLOWER</h3>
                     <div class="price-value">
                         <span class="currency">$</span>
-                        <span class="amount">20</span>
-                        <span class="month">/month</span>
+                        <span class="amount">299</span>
+                        <span class="month">one time</span>
                     </div>
                     <ul class="pricing-content">
-                        <li><b>5</b> Websites</li>
-                        <li><b>10GB</b> Storage</li>
-                        <li><b>100GB</b> Bandwidth</li>
-                        <li><b>Unlmtd.</b> Email Accounts</li>
-                        <li><b>Unlmtd.</b> Databases</li>
-                        <li><b>Daily</b> Support</li>
-                        <li><b>Weekly</b> Backups</li>
+                        <li><b>5</b> Pages</li>
+                        <li><b>5</b> Photo Galleries</li>
+                        <li><b>5</b> Contact Forms</li>
+                        <li><b>1mo.</b> Maintenance</li>
                     </ul>
-                    <a href="contact.html" class="pricingTable-signup">Get Started</a>
+                    <a href="contact.php" class="pricingTable-signup">Get Started</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="pricingTable green" data-aos="flip-left" data-aos-delay="1000">
-                    <h3 class="title">ENTERPRISE</h3>
+                    <h3 class="title">FIELD</h3>
                     <div class="price-value">
                         <span class="currency">$</span>
-                        <span class="amount">25</span>
-                        <span class="month">/month</span>
+                        <span class="amount">499</span>
+                        <span class="month">one time</span>
                     </div>
                     <ul class="pricing-content">
-                        <li><b>10</b> Websites</li>
-                        <li><b>Unlmtd.</b> Storage</li>
-                        <li><b>Unlmtd.</b> Bandwidth</li>
-                        <li><b>Unlmtd.</b> Email Accounts</li>
-                        <li><b>Unlmtd.</b> Databases</li>
-                        <li><b>Daily</b> Support</li>
-                        <li><b>Daily</b> Backups</li>
+                        <li><b>6-10</b> Pages</li>
+                        <li><b>6-10</b> Photo Galleries</li>
+                        <li><b>6-10</b> Contact Forms</li>
+                        <li><b>1mo.</b> Maintenance</li>
                     </ul>
-                    <a href="contact.html" class="pricingTable-signup">Get Started</a>
+                    <a href="contact.php" class="pricingTable-signup">Get Started</a>
                 </div>
             </div>
         </div>
         <div class="row mt-5">
           <div class="mx-auto text-white d-flex align-items-start" data-aos="fade-right">
-            <div class="mr-5">
-              <h3>Need custom web design?</h3>
-              <p>Professional results. Mobile-friendly. <i>Flat rate</i>.</p>
-              <a href="web-design.html"><button class="btn btn-sm bg-warning">Learn More</button></a>
+            <div class="mr-4">
+              <h3>Don&#39;t forget about web hosting!</h3>
+              <p>Full Features. Full Suport. <i>No Contract</i>.</p>
+              <a href="web-hosting.php"<button class="btn btn-sm bg-warning">Learn More</button></a>
             </div>
-            <div class="pl-3">
-              <p><span class="display-4">$99</span>/flat</p>
+            <div>
+              <p><span class="display-4">$10</span>/month</p>
             </div>
           </div>
         </div>
@@ -265,7 +282,7 @@
               <b>Javascript</b>. This means we are able to create a wide array of web apps that can give your website even more functionality. Some customers
               require websites with more than just static pages, instead needing dynamic content that is easy to update and is more interactive with the users.
               There are so many different things that can be built with custom programming that it would be impossible to list it all on this page.
-                Please <a href="contact.html">contact us</a> to see if Sunflwr custom programming services are a fit for you!</p>
+                Please <a href="contact.php">contact us</a> to see if Sunflwr Custom Programming services are a fit for you!</p>
           </div>
           <div class="col-md-8 col-sm-12 col-12 text-justify">
             <nav>
@@ -347,7 +364,7 @@
           </div>
           <div id="contactForm" class="collapse col-md-5 col-sm-12 text-md-left text-sm-center text-center mt-md-0 mt-sm-4 mt-5 border-left">
             <h4 class="mb-3">Or contact us <span class="text-warning">directly:</span></h4>
-            <p><i class="fa fa-envelope mr-2"></i>info@SunflowerMedia.com</p>
+            <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@mysunflwr.com">info@mySUNFLWR.com</a></p>
             <p><i class="fa fa-phone mr-2"></i>upon request</p>
             <p class="text-muted alert alert-primary small dismiss">We value your privacy. Your information will never be sold or shared.</p>
           </div>
@@ -361,14 +378,13 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-6 mb-md-0 mb-sm-4 mb-4">
               <h6 class="title">Services</h6>
-              <p><a href="#">Website Services</a></p>
-              <p><a href="#">Photo &amp; Video Production</a></p>
-              <p><a href="#">SEO Management</a></p>
-              <p><a href="#">Original Content Copywriting</a></p>
+              <p><a href="web-design.php">Web Design</a></p>
+              <p><a href="web-hosting.php">Web Hosting</a></p>
+              <h6 class="title mt-3">Attributions</h6>
+              <p><a href="#">Giving Thanks</a></p>
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Support</h6>
-              <p><a href="#">Customer Support</a></p>
               <p><a href="#">Support Portal</a></p>
               <p><a href="#">Video Tutorials</a></p>
               <p><a href="#">Manage Your Account</a></p>
@@ -381,13 +397,13 @@
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Business Stuff</h6>
-              <p><a href="#">About Sunflwr</a></p>
-              <p><a href="#">Company Blog</a></p>
-              <p><a href="#">Contact Us</a></p>
+              <p><a href="about-us.php">About SUNFLWR</a></p>
+              <p><a href="blog/index.php">Company Blog</a></p>
+              <p><a href="contact.php">Contact Us</a></p>
               <p class="mt-2">
-                <i class="fa fa-facebook fa-lg mr-3"></i>
-                <i class="fa fa-twitter fa-lg mr-3"></i>
-                <i class="fa fa-instagram fa-lg"></i>
+                <a href="#"><i class="fa fa-facebook fa-lg mr-3"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-lg mr-3"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
               </p>
             </div>
           </div>
@@ -397,7 +413,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 small d-flex align-items-center">
-              <p>Copyright &copy; 2020 <b>Sunflwr</b></p>
+              <p>Copyright &copy; 2020 | <b>S U N F L W R</b></p>
             </div>
           </div>
         </div>

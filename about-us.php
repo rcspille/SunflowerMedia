@@ -35,7 +35,7 @@
     <!-- begin NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark blue-bg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="./img/design/logo.png" class="logo" alt="Sunflwr logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,30 +45,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">Who We Are</a>
+              <a class="nav-link" href="about-us.php">Who We Are</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
               <div class="dropdown-menu blue-bg" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="web-design.html">Web Design</a>
-                <a class="dropdown-item" href="web-hosting.html">Web Hosting</a>
+                <a class="dropdown-item" href="web-design.php">Web Design</a>
+                <a class="dropdown-item" href="web-hosting.php">Web Hosting</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <a class="nav-link" href="portfolio.php">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="navbar-item">
-              <a class="nav-link" href="blog/index.html">Blog</a>
+              <a class="nav-link" href="blog/index.php">Blog</a>
             </li>
             <li class="navbar-item">
-              <a class="nav-link" href="clients/index.html">Client Login</a>
+              <a class="nav-link" href="clients/index.php">Client Login</a>
             </li>
           </ul>
         </div>
@@ -113,7 +113,7 @@
                     coding awesome programs. This is when I bought my first HTML and CSS books, self-teaching myself everything I needed to know for the first several
                     years. More recently, I have been certified by the Codecademy Web Development Bootcamp.</p>
                   <p>I am proficient in <b>HTML5</b>, <b>CSS3</b>, <b>PHP</b>, <b>MySQL</b>, and <b>JQuery</b>, and I utilize the <b>Bootstrap5</b> framework to build
-                    clean and responsive dekstop and mobile websites. You can always skip the jargon and view my <a href="portfolio.html">recent work</a> to see my
+                    clean and responsive dekstop and mobile websites. You can always skip the jargon and view my <a href="portfolio.php">recent work</a> to see my
                     skills firsthand!</p>
                 </div>
               </div>
@@ -157,8 +157,8 @@
                 <p class="card-text">You may be wondering: <b>How do we combine low prices and a quality product?</b> Normally, this wouldn&#39;t be possible,
                   but we are not trying to get rich on this. We are trying to grow a brand while developing an awesome array of services. Naturally, we must
                   start small and build from there. Get your quality desktop and mobile website while we are still building our portfolio! These prices will
-                  not last forever. If you&#39;re still unsure, just view our <a href="portfolio.html">portfolio</a>. These are real customers who opted for
-                  our web design services, paying only <a href="web-design.html#pricing">our prices</a> listed!</p>
+                  not last forever. If you&#39;re still unsure, just view our <a href="portfolio.php">portfolio</a>. These are real customers who opted for
+                  our web design services, paying only <a href="web-design.php#pricing">our prices</a> listed!</p>
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@
           </div>
           <div id="contactForm" class="collapse col-md-5 col-sm-12 text-md-left text-sm-center text-center mt-md-0 mt-sm-4 mt-5 border-left">
             <h4 class="mb-3">Or contact us <span class="text-warning">directly:</span></h4>
-            <p><i class="fa fa-envelope mr-2"></i>info@SunflowerMedia.com</p>
+            <p><i class="fa fa-envelope mr-2"></i><a href="mailto:info@mysunflwr.com">info@mySUNFLWR.com</a></p>
             <p><i class="fa fa-phone mr-2"></i>upon request</p>
             <p class="text-muted alert alert-primary small dismiss">We value your privacy. Your information will never be sold or shared.</p>
           </div>
@@ -214,14 +214,13 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-6 mb-md-0 mb-sm-4 mb-4">
               <h6 class="title">Services</h6>
-              <p><a href="#">Website Services</a></p>
-              <p><a href="#">Photo &amp; Video Production</a></p>
-              <p><a href="#">SEO Management</a></p>
-              <p><a href="#">Original Content Copywriting</a></p>
+              <p><a href="web-design.php">Web Design</a></p>
+              <p><a href="web-hosting.php">Web Hosting</a></p>
+              <h6 class="title mt-3">Attributions</h6>
+              <p><a href="#">Giving Thanks</a></p>
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Support</h6>
-              <p><a href="#">Customer Support</a></p>
               <p><a href="#">Support Portal</a></p>
               <p><a href="#">Video Tutorials</a></p>
               <p><a href="#">Manage Your Account</a></p>
@@ -234,13 +233,13 @@
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Business Stuff</h6>
-              <p><a href="#">About Sunflwr</a></p>
-              <p><a href="#">Company Blog</a></p>
-              <p><a href="#">Contact Us</a></p>
+              <p><a href="about-us.php">About SUNFLWR</a></p>
+              <p><a href="blog/index.php">Company Blog</a></p>
+              <p><a href="contact.php">Contact Us</a></p>
               <p class="mt-2">
-                <i class="fa fa-facebook fa-lg mr-3"></i>
-                <i class="fa fa-twitter fa-lg mr-3"></i>
-                <i class="fa fa-instagram fa-lg"></i>
+                <a href="#"><i class="fa fa-facebook fa-lg mr-3"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-lg mr-3"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
               </p>
             </div>
           </div>
@@ -250,7 +249,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 small d-flex align-items-center">
-              <p>Copyright &copy; 2020 <b>Sunflwr</b></p>
+              <p>Copyright &copy; 2020 | <b>S U N F L W R</b></p>
             </div>
           </div>
         </div>

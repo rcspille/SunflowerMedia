@@ -32,10 +32,83 @@
 
   <body>
 
+    <!-- CONTACT FORM SCRIPT -->
+    <?php
+    // define variables and set to empty values
+    $name = $email = $phone = $company = $message = "";
+    $nameErr = $emailErr = $phoneErr = $companyErr = $messageErr = "";
+    $success = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if (empty($_POST["name"])){
+        $nameErr = "Name is required.";
+      } else {
+        $name = test_input($_POST["name"]);
+        $nameErr = "";
+        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+   	    $nameErr = "Only letters and white space allowed.";
+        }
+      }
+
+      if (empty($_POST["email"])){
+        $emailErr = "Email is required.";
+      } else {
+        $email = test_input($_POST["email"]);
+        $emailErr = "";
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          $emailErr = "Invalid email format.";
+        }
+      }
+
+      if (empty($_POST["phone"])){
+        $phoneErr = "";
+      } else {
+        $phone = test_input($_POST["phone"]);
+        $phoneErr = "";
+        if (!preg_match("/^[0-9 + ( )]{0,20}$/",$phone)) {
+          $phoneErr = "Only 0-9, +, () allowed.";
+        }
+      }
+
+      if (empty($_POST["company"])){
+        $companyErr = "";
+      } else {
+         $company = test_input($_POST["company"]);
+      }
+
+      if (empty($_POST["message"])){
+        $messageErr = "Message is required.";
+      } else {
+        $message = test_input($_POST["message"]);
+        $messageErr = "";
+      }
+    }
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && $nameErr == "" && $emailErr == "" && $phoneErr == "" && $companyErr == "" && $messageErr == "") {
+      $to = "spiller.riley@gmail.com";
+      $emailSubject = "Sunflwr Contact Form";
+      $txt = "<b>From:</b> " .$name. "<br><b>Email:</b> " .$email. "<br><b>Phone:</b> " .$phone. "<br><b>Company:</b> " .$company. "<br><b>Message:</b><br>" .$message;
+      $headers = "reply-to: ".$email. "\r\n";
+      $headers .= "MIME-Version: 1.0" . "\r\n";
+  	  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+      mail($to,$emailSubject,$txt,$headers)
+        or die();
+      $success = "Mail sent successfully! We&#39;ll have someone with you soon.";
+    }
+    ?>
+
     <!-- begin NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark blue-bg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="./img/design/logo.png" class="logo" alt="Sunflwr logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,30 +118,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about-us.html">Who We Are</a>
+              <a class="nav-link" href="about-us.php">Who We Are</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
               <div class="dropdown-menu blue-bg" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="web-design.html">Web Design</a>
-                <a class="dropdown-item" href="web-hosting.html">Web Hosting</a>
+                <a class="dropdown-item" href="web-design.php">Web Design</a>
+                <a class="dropdown-item" href="web-hosting.php">Web Hosting</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <a class="nav-link" href="portfolio.php">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="navbar-item">
-              <a class="nav-link" href="blog/index.html">Blog</a>
+              <a class="nav-link" href="blog/index.php">Blog</a>
             </li>
             <li class="navbar-item">
-              <a class="nav-link" href="clients/index.html">Client Login</a>
+              <a class="nav-link" href="clients/index.php">Client Login</a>
             </li>
           </ul>
         </div>
@@ -101,25 +174,31 @@
                 <i class="fa fa-envelope mr-3"></i>CONTACT US
               </div>
               <div class="card-body">
-                <form method="POST" action="#" class="row">
+                <?php echo "<h2 class='text-success text-center'>".$success."</h2>";?>
+                <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" class="row <?php if($success!=""){echo "d-none";}?>">
                   <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="form-group">
-                      <input name="name" type="text" class="form-control" placeholder="*Name">
+                      <input name="name" type="text" class="form-control" placeholder="*Name" value="<?php echo $_POST['name'];?>">
+                      <span class="text-danger"><?php echo $nameErr;?></span>
                     </div>
                     <div class="form-group">
-                      <input name="email" type="email" class="form-control" placeholder="*Email">
+                      <input name="email" type="email" class="form-control" placeholder="*Email" value="<?php echo $_POST['email'];?>">
+                      <span class="text-danger"><?php echo $emailErr;?></span>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="form-group">
-                      <input name="phone" type="tel" class="form-control" placeholder="Phone">
+                      <input name="phone" type="tel" class="form-control" placeholder="Phone" value="<?php echo $_POST['phone'];?>">
+                      <span class="text-danger"><?php echo $phoneErr;?></span>
                     </div>
                     <div class="form-group">
-                      <input name="company" type="text" class="form-control" placeholder="Company">
+                      <input name="company" type="text" class="form-control" placeholder="Company" value="<?php echo $_POST['company'];?>">
+                      <span class="text-danger"><?php echo $companyErr;?></span>
                     </div>
                   </div>
                   <div class="col-12">
-                    <textarea name="message" class="form-control" placeholder="*Your Message" rows="5"></textarea>
+                    <textarea name="message" class="form-control" placeholder="*Your Message" rows="5"><?php echo $_POST['message'];?></textarea>
+                    <span class="text-danger"><?php echo $messageErr;?></span>
                     <center><button class="btn bg-green mt-3" type="submit">Send Message</button></center>
                   </div>
                 </form>
@@ -134,7 +213,7 @@
               </div>
               <div class="card-body">
                 <p class="card-text text-center">
-                  <i class="fa fa-envelope mr-2"></i>info@SunflowerMedia.com<br>
+                  <i class="fa fa-envelope mr-2"><a class="text-dark" href="mailto:info@mysunflwr.com"></i>info@mysunflwr.com</a><br>
                   <i class="fa fa-phone mt-3 mr-2"></i>available upon request
                 </p>
               </div>
@@ -175,14 +254,13 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-6 mb-md-0 mb-sm-4 mb-4">
               <h6 class="title">Services</h6>
-              <p><a href="#">Website Services</a></p>
-              <p><a href="#">Photo &amp; Video Production</a></p>
-              <p><a href="#">SEO Management</a></p>
-              <p><a href="#">Original Content Copywriting</a></p>
+              <p><a href="web-design.php">Web Design</a></p>
+              <p><a href="web-hosting.php">Web Hosting</a></p>
+              <h6 class="title mt-3">Attributions</h6>
+              <p><a href="#">Giving Thanks</a></p>
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Support</h6>
-              <p><a href="#">Customer Support</a></p>
               <p><a href="#">Support Portal</a></p>
               <p><a href="#">Video Tutorials</a></p>
               <p><a href="#">Manage Your Account</a></p>
@@ -195,13 +273,13 @@
             </div>
             <div class="col-md-3 col-sm-6 col-6">
               <h6 class="title">Business Stuff</h6>
-              <p><a href="#">About Sunflwr</a></p>
-              <p><a href="#">Company Blog</a></p>
-              <p><a href="#">Contact Us</a></p>
+              <p><a href="about-us.php">About SUNFLWR</a></p>
+              <p><a href="blog/index.php">Company Blog</a></p>
+              <p><a href="contact.php">Contact Us</a></p>
               <p class="mt-2">
-                <i class="fa fa-facebook fa-lg mr-3"></i>
-                <i class="fa fa-twitter fa-lg mr-3"></i>
-                <i class="fa fa-instagram fa-lg"></i>
+                <a href="#"><i class="fa fa-facebook fa-lg mr-3"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-lg mr-3"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
               </p>
             </div>
           </div>
@@ -211,7 +289,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 small d-flex align-items-center">
-              <p>Copyright &copy; 2020 <b>Sunflwr</b></p>
+              <p>Copyright &copy; 2020 | <b>S U N F L W R</b></p>
             </div>
           </div>
         </div>
