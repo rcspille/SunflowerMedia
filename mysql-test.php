@@ -1,4 +1,12 @@
 <!doctype html>
+
+<?php
+$username = "ugc8zzr3w387t";
+$password = "riley350045";
+$database = "db3axfv7ywdwbx";
+$mysqli = new mysqli("localhost", $username, $password, $database);
+?>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -33,96 +41,21 @@
   <body>
 
     <!-- CONTACT FORM SCRIPT -->
-    <?php
-    date_default_timezone_set("America/Phoenix");
-
-    // define variables and set to empty values
-    $name = $email = $phone = $company = $message = "";
-    $nameErr = $emailErr = $phoneErr = $companyErr = $messageErr = "";
-    $success = "";
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if (empty($_POST["name"])){
-        $nameErr = "Name is required.";
-      } else {
-        $name = test_input($_POST["name"]);
-        $nameErr = "";
-        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-   	    $nameErr = "Only letters and white space allowed.";
-        }
-      }
-
-      if (empty($_POST["email"])){
-        $emailErr = "Email is required.";
-      } else {
-        $email = test_input($_POST["email"]);
-        $emailErr = "";
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $emailErr = "Invalid email format.";
-        }
-      }
-
-      if (empty($_POST["phone"])){
-        $phoneErr = "";
-      } else {
-        $phone = test_input($_POST["phone"]);
-        $phoneErr = "";
-        if (!preg_match("/^[0-9 + ( )]{0,20}$/",$phone)) {
-          $phoneErr = "Only 0-9, +, () allowed.";
-        }
-      }
-
-      if (empty($_POST["company"])){
-        $companyErr = "";
-      } else {
-         $company = test_input($_POST["company"]);
-      }
-
-      if (empty($_POST["message"])){
-        $messageErr = "Message is required.";
-      } else {
-        $message = test_input($_POST["message"]);
-        $messageErr = "";
-      }
-    }
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && $nameErr == "" && $emailErr == "" && $phoneErr == "" && $companyErr == "" && $messageErr == "") {
-      $to = "spiller.riley@gmail.com";
-      $emailSubject = "Sunflwr Contact Form";
-      $txt = "<b>From:</b> " .$name. "<br><b>Email:</b> " .$email. "<br><b>Phone:</b> " .$phone. "<br><b>Company:</b> " .$company. "<br><b>Message:</b><br>" .$message. "<br><br><br>Sent at ".date("d-m-Y")." at ".date("H:i")." Arizona time.<br>Sent from ".htmlspecialchars($_SERVER['PHP_SELF']);
-      $headers = "reply-to: ".$email. "\r\n";
-      $headers .= "MIME-Version: 1.0" . "\r\n";
-  	  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-      mail($to,$emailSubject,$txt,$headers)
-        or die();
-      $success = "Mail sent successfully! We&#39;ll have someone with you soon.";
-    }
-    ?>
+        <?php require 'scripts/contact-form-general.php';?>
+    <!-- end CONTACT FORM SCRIPT -->
 
     <!-- begin NAVIGATION -->
         <?php
-        // Make a MySQL Connection
-        mysql_connect("localhost", "ugc8zzr3w387t", "d#51@od3c}+b") or die(mysql_error());
-        mysql_select_db("db3axfv7ywdwbx") or die(mysql_error());
-
-        // Retrieve all the data from the "example" table
-        $result = mysql_query("SELECT * FROM site WHERE `name` = 'top-navbar'")
-        or die(mysql_error());
-
-        // store the record of the "example" table into $row
-        $row = mysql_fetch_array( $result );
-        // Print out the contents of the entry
-
-        echo .$row['code'];
-
+        $query = "SELECT * FROM site WHERE name='top-navbar'";
+        if ($result = $mysqli->query($query)) {
+          while ($row = $result->fetch_assoc()) {
+            $name = $row["name"];
+            $code = $row["code"];
+            echo $code;
+          }
+          /*freeresultset*/
+          $result->free();
+        }
         ?>
     <!-- end NAVIGATION -->
 
@@ -225,53 +158,20 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container-fluid bg-dark pt-4 pb-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-sm-6 col-6 mb-md-0 mb-sm-4 mb-4">
-              <h6 class="title">Services</h6>
-              <p><a href="web-design.php">Web Design</a></p>
-              <p><a href="web-hosting.php">Web Hosting</a></p>
-              <h6 class="title mt-3">Attributions</h6>
-              <p><a href="#">Giving Thanks</a></p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-6">
-              <h6 class="title">Support</h6>
-              <p><a href="#">Support Portal</a></p>
-              <p><a href="#">Video Tutorials</a></p>
-              <p><a href="#">Manage Your Account</a></p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-6 mb-md-0 mb-sm-4 mb-4">
-              <h6 class="title">Affiliates</h6
-              <p><a href="#">Join Our Referral Program</a></p>
-              <p><a href="#">Advertise With Us</a></p>
-              <p><a href="#">Manage Affiliate Account</a></p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-6">
-              <h6 class="title">Business Stuff</h6>
-              <p><a href="about-us.php">About SUNFLWR</a></p>
-              <p><a href="blog/index.php">Company Blog</a></p>
-              <p><a href="contact.php">Contact Us</a></p>
-              <p class="mt-2">
-                <a href="#"><i class="fa fa-facebook fa-lg mr-3"></i></a>
-                <a href="#"><i class="fa fa-twitter fa-lg mr-3"></i></a>
-                <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid pt-1 pb-1" style="background-color: #333;">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 small d-flex align-items-center">
-              <p>Copyright &copy; 2020 | <b>S U N F L W R</b></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- begin FOOTER -->
+        <?php
+        $query = "SELECT * FROM site WHERE name='footer'";
+        if ($result = $mysqli->query($query)) {
+          while ($row = $result->fetch_assoc()) {
+            $name = $row["name"];
+            $code = $row["code"];
+            echo $code;
+          }
+          /*freeresultset*/
+          $result->free();
+        }
+        ?>
+    <!-- end FOOTER -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
