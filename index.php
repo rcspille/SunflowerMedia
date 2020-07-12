@@ -1,4 +1,12 @@
 <!doctype html>
+
+<?php
+$username = "ugc8zzr3w387t";
+$password = "riley350045";
+$database = "db3axfv7ywdwbx";
+$mysqli = new mysqli("localhost", $username, $password, $database);
+?>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -33,122 +41,22 @@
   <body>
 
     <!-- CONTACT FORM SCRIPT -->
-    <?php
-    date_default_timezone_set("America/Phoenix");
-
-    // define variables and set to empty values
-    $name = $email = $phone = $company = $message = "";
-    $nameErr = $emailErr = $phoneErr = $companyErr = $messageErr = "";
-    $success = "";
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if (empty($_POST["name"])){
-        $nameErr = "Name is required.";
-      } else {
-        $name = test_input($_POST["name"]);
-        $nameErr = "";
-        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-   	    $nameErr = "Only letters and white space allowed.";
-        }
-      }
-
-      if (empty($_POST["email"])){
-        $emailErr = "Email is required.";
-      } else {
-        $email = test_input($_POST["email"]);
-        $emailErr = "";
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $emailErr = "Invalid email format.";
-        }
-      }
-
-      if (empty($_POST["phone"])){
-        $phoneErr = "";
-      } else {
-        $phone = test_input($_POST["phone"]);
-        $phoneErr = "";
-        if (!preg_match("/^[0-9 + ( )]{0,20}$/",$phone)) {
-          $phoneErr = "Only 0-9, +, () allowed.";
-        }
-      }
-
-      if (empty($_POST["company"])){
-        $companyErr = "";
-      } else {
-         $company = test_input($_POST["company"]);
-      }
-
-      if (empty($_POST["message"])){
-        $messageErr = "Message is required.";
-      } else {
-        $message = test_input($_POST["message"]);
-        $messageErr = "";
-      }
-    }
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && $nameErr == "" && $emailErr == "" && $phoneErr == "" && $companyErr == "" && $messageErr == "") {
-      $to = "spiller.riley@gmail.com";
-      $emailSubject = "Sunflwr Contact Form";
-      $txt = "<b>From:</b> " .$name. "<br><b>Email:</b> " .$email. "<br><b>Phone:</b> " .$phone. "<br><b>Company:</b> " .$company. "<br><b>Message:</b><br>" .$message. "<br><br><br>Sent at ".date("d-m-Y")." at ".date("H:i")." Arizona time.<br>Sent from ".htmlspecialchars($_SERVER['PHP_SELF']);
-      $headers = "reply-to: ".$email. "\r\n";
-      $headers .= "MIME-Version: 1.0" . "\r\n";
-  	  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-      mail($to,$emailSubject,$txt,$headers)
-        or die();
-      $success = "Mail sent successfully! We&#39;ll have someone with you soon.";
-    }
-    ?>
+        <?php require 'scripts/contact-form-general.php';?>
+    <!-- end CONTACT FORM SCRIPT -->
 
     <!-- begin NAVIGATION -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark blue-bg">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">
-          <img src="./img/design/logo.png" class="logo" alt="Sunflwr logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about-us.php">Who We Are</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu blue-bg" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="web-design.php">Web Design</a>
-                <a class="dropdown-item" href="web-hosting.php">Web Hosting</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.php">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact Us</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="navbar-item">
-              <a class="nav-link" href="blog/index.php">Blog</a>
-            </li>
-            <li class="navbar-item">
-              <a class="nav-link" href="clients/index.php">Client Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <?php
+        $query = "SELECT * FROM site WHERE name='top-navbar'";
+        if ($result = $mysqli->query($query)) {
+          while ($row = $result->fetch_assoc()) {
+            $name = $row["name"];
+            $code = $row["code"];
+            echo $code;
+          }
+          /*freeresultset*/
+          $result->free();
+        }
+        ?>
     <!-- end NAVIGATION -->
 
     <header class="jumbotron jumbotron-fluid mb-lg-0 mb-md-0 mb-sm-0 mb-0">
