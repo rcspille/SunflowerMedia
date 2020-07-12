@@ -32,6 +32,81 @@
 
   <body>
 
+    <!-- CONTACT FORM SCRIPT -->
+    <?php
+    date_default_timezone_set("America/Phoenix");
+
+    // define variables and set to empty values
+    $name = $email = $phone = $company = $message = "";
+    $nameErr = $emailErr = $phoneErr = $companyErr = $messageErr = "";
+    $success = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if (empty($_POST["name"])){
+        $nameErr = "Name is required.";
+      } else {
+        $name = test_input($_POST["name"]);
+        $nameErr = "";
+        if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+   	    $nameErr = "Only letters and white space allowed.";
+        }
+      }
+
+      if (empty($_POST["email"])){
+        $emailErr = "Email is required.";
+      } else {
+        $email = test_input($_POST["email"]);
+        $emailErr = "";
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          $emailErr = "Invalid email format.";
+        }
+      }
+
+      if (empty($_POST["phone"])){
+        $phoneErr = "";
+      } else {
+        $phone = test_input($_POST["phone"]);
+        $phoneErr = "";
+        if (!preg_match("/^[0-9 + ( )]{0,20}$/",$phone)) {
+          $phoneErr = "Only 0-9, +, () allowed.";
+        }
+      }
+
+      if (empty($_POST["company"])){
+        $companyErr = "";
+      } else {
+         $company = test_input($_POST["company"]);
+      }
+
+      if (empty($_POST["message"])){
+        $messageErr = "Message is required.";
+      } else {
+        $message = test_input($_POST["message"]);
+        $messageErr = "";
+      }
+    }
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && $nameErr == "" && $emailErr == "" && $phoneErr == "" && $companyErr == "" && $messageErr == "") {
+      $to = "spiller.riley@gmail.com";
+      $emailSubject = "Sunflwr Contact Form";
+      $txt = "<b>From:</b> " .$name. "<br><b>Email:</b> " .$email. "<br><b>Phone:</b> " .$phone. "<br><b>Company:</b> " .$company. "<br><b>Message:</b><br>" .$message. "<br><br><br>Sent at ".date("d-m-Y")." at ".date("H:i")." Arizona time.<br>Sent from ".htmlspecialchars($_SERVER['PHP_SELF']);
+      $headers = "reply-to: ".$email. "\r\n";
+      $headers .= "MIME-Version: 1.0" . "\r\n";
+  	  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+      mail($to,$emailSubject,$txt,$headers)
+        or die();
+      $success = "Mail sent successfully! We&#39;ll have someone with you soon.";
+    }
+    ?>
+
     <!-- begin NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark blue-bg">
       <div class="container">
@@ -320,28 +395,33 @@
             <h2 class="mb-3">Like what <span class="text-blue">you see?</span></h2>
             <p>Whatever your needs are, we would love to be a part of your next project!</p>
             <h5 class="mb-4">Contact us today for a <span class='text-blue'>free, no-obligation</span> appointment to discuss your multimedia needs.</h5>
-            <a href="#contactForm" data-toggle="collapse"><button type="button" class="btn btn-sm blue-bg">Ask Us Anything!</button></a>
-            <form class="collapse mt-3 row" id="contactForm">
-              <div class="col-lg-6 col-md-12 col-sm-12">
+            <a name="contactSuccess" href="#contactForm" data-toggle="collapse"><button type="button" class="btn btn-sm blue-bg <?php if($success!=""){echo "d-none";}?>">Ask Us Anything!</button></a>
+            <?php echo "<h2 class='text-success text-center'>".$success."</h2>";?>
+            <form id="contactForm" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>#contactSuccess" class="collapse mt-5 row <?php if($success!=""){echo "d-none";}?>">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="required">
+                  <input name="name" type="text" class="form-control" placeholder="*Name" value="<?php echo $_POST['name'];?>">
+                  <span class="text-danger"><?php echo $nameErr;?></span>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="required">
-                </div>
-                <div class="form-group">
-                  <label for="company">Company</label>
-                  <input type="text" class="form-control" id="company" placeholder="NOT required">
+                  <input name="email" type="email" class="form-control" placeholder="*Email" value="<?php echo $_POST['email'];?>">
+                  <span class="text-danger"><?php echo $emailErr;?></span>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="form-group">
-                  <label for="message">Your Message</label>
-                  <textarea class="form-control" id="message" rows="6" placeholder="Please tell us a little about what you're looking for. We look forward to chatting!"></textarea>
+                  <input name="phone" type="tel" class="form-control" placeholder="Phone" value="<?php echo $_POST['phone'];?>">
+                  <span class="text-danger"><?php echo $phoneErr;?></span>
                 </div>
-                <button type="submit" class="btn blue-bg">Send Message</button>
+                <div class="form-group">
+                  <input name="company" type="text" class="form-control" placeholder="Company" value="<?php echo $_POST['company'];?>">
+                  <span class="text-danger"><?php echo $companyErr;?></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <textarea name="message" class="form-control" placeholder="*Your Message" rows="5"><?php echo $_POST['message'];?></textarea>
+                <span class="text-danger"><?php echo $messageErr;?></span>
+                <button class="btn blue-bg mt-3 float-right" type="submit">Send Message</button>
               </div>
             </form>
           </div>

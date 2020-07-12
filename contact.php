@@ -34,6 +34,8 @@
 
     <!-- CONTACT FORM SCRIPT -->
     <?php
+    date_default_timezone_set("America/Phoenix");
+
     // define variables and set to empty values
     $name = $email = $phone = $company = $message = "";
     $nameErr = $emailErr = $phoneErr = $companyErr = $messageErr = "";
@@ -94,7 +96,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST" && $nameErr == "" && $emailErr == "" && $phoneErr == "" && $companyErr == "" && $messageErr == "") {
       $to = "spiller.riley@gmail.com";
       $emailSubject = "Sunflwr Contact Form";
-      $txt = "<b>From:</b> " .$name. "<br><b>Email:</b> " .$email. "<br><b>Phone:</b> " .$phone. "<br><b>Company:</b> " .$company. "<br><b>Message:</b><br>" .$message;
+      $txt = "<b>From:</b> " .$name. "<br><b>Email:</b> " .$email. "<br><b>Phone:</b> " .$phone. "<br><b>Company:</b> " .$company. "<br><b>Message:</b><br>" .$message. "<br><br><br>Sent at ".date("d-m-Y")." at ".date("H:i")." Arizona time.<br>Sent from ".htmlspecialchars($_SERVER['PHP_SELF']);
       $headers = "reply-to: ".$email. "\r\n";
       $headers .= "MIME-Version: 1.0" . "\r\n";
   	  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
